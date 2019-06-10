@@ -39,7 +39,7 @@ router.get("/", (req, res) => {
     if (error) {
       res.status(500).send(error);
     } else {
-      //.................... loop start....................
+      
       for (var i = 0; i < result.length; i++) {
         let latitude = result[i].latitude;
         let longitude = result[i].longitude;
@@ -57,7 +57,7 @@ router.get("/", (req, res) => {
           latitude: item.latitude,
           score: score
         }));
-      } //...................... ends .......................
+      } 
 
       res.status(200).send({ suggestion: coodinate });
     }
